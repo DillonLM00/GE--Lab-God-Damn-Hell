@@ -1696,6 +1696,8 @@ GameObject:
   - component: {fileID: 5648358945693428402}
   - component: {fileID: 5648358945693428403}
   - component: {fileID: 5648358945693428413}
+  - component: {fileID: 5661682980184942289}
+  - component: {fileID: -7669744642259307396}
   m_Layer: 0
   m_Name: Demon Fighter
   m_TagString: Enemy
@@ -1745,7 +1747,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 116
+  m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &5648358945693428403
 MonoBehaviour:
@@ -1761,7 +1763,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthPoints: 10
   movementspeed: 2.5
-  aggroRange: 0
+  aggroRange: 10
 --- !u!114 &5648358945693428413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1775,6 +1777,41 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 5688606930959994286}
+--- !u!114 &5661682980184942289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5648358945693428400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d471dd4bae8b6d04e98afad6c290f691, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activated: 0
+--- !u!195 &-7669744642259307396
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5648358945693428400}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.6
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 5.7
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &5785463436633723182
 GameObject:
   m_ObjectHideFlags: 0
