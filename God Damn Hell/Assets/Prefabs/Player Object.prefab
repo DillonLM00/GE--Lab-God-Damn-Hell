@@ -248,8 +248,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stopRotation: 0
-  sword: {fileID: 2494310650950989320}
-  shield: {fileID: 2494310651391112281}
+  stopMovement: 0
+  swordCollider: {fileID: 3340821566274758243}
+  shieldCollider: {fileID: 3340821566654011886}
 --- !u!114 &3340821567399859192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -433,6 +434,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Character Shield
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5f2643bf015de7446a4b99e11a6d3c79, type: 3}
+      propertyPath: m_TagString
+      value: Shield
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f2643bf015de7446a4b99e11a6d3c79, type: 3}
 --- !u!1 &2494310651391112281 stripped
@@ -453,11 +458,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2494310651391112281}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
+  m_IsTrigger: 1
+  m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 0.17867886, y: 1.3908811, z: 1.3908806}
-  m_Center: {x: -1.866955, y: 1.9834253, z: -0.0017819785}
+  m_Size: {x: 0.17867874, y: 3.2700229, z: 3.1864088}
+  m_Center: {x: -1.8669549, y: 2.4442432, z: 0.07105165}
 --- !u!1001 &3340821566393895554
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -802,7 +807,7 @@ BoxCollider:
   m_GameObject: {fileID: 2494310650950989320}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 0.10671614, y: 3.0240703, z: 0.4411454}
   m_Center: {x: 1.6410075, y: 3.1174352, z: 0.000610389}
@@ -820,6 +825,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 3340821567255477765}
   player: {fileID: 3340821567399859190}
+  tempKnockbackStrength: 5
 --- !u!1001 &3340821567581116217
 PrefabInstance:
   m_ObjectHideFlags: 0

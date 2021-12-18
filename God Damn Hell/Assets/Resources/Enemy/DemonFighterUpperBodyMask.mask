@@ -6,8 +6,8 @@ AvatarMask:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: DemonFighterArmMask
-  m_Mask: 00000000010000000100000000000000000000000100000001000000010000000100000001000000010000000100000001000000
+  m_Name: DemonFighterUpperBodyMask
+  m_Mask: 00000000010000000100000000000000000000000100000001000000010000000100000000000000000000000100000001000000
   m_Elements:
   - m_Path: 
     m_Weight: 1
@@ -29,21 +29,17 @@ AvatarMask:
     m_Weight: 1
   - m_Path: Armature/HandIK.R/HandIK.R_end
     m_Weight: 1
-  - m_Path: Armature/IKLegPole.L
-    m_Weight: 1
-  - m_Path: Armature/IKLegPole.L/IKLegPole.L_end
-    m_Weight: 1
-  - m_Path: Armature/IKLegPole.R
-    m_Weight: 1
-  - m_Path: Armature/IKLegPole.R/IKLegPole.R_end
-    m_Weight: 1
   - m_Path: Armature/IKTarget.L
     m_Weight: 1
-  - m_Path: Armature/IKTarget.L/IKTarget.L_end
+  - m_Path: Armature/IKTarget.L/IKLegPole.L
+    m_Weight: 1
+  - m_Path: Armature/IKTarget.L/IKLegPole.L/IKLegPole.L_end
     m_Weight: 1
   - m_Path: Armature/IKTarget.R
     m_Weight: 1
-  - m_Path: Armature/IKTarget.R/IKTarget.R_end
+  - m_Path: Armature/IKTarget.R/IKLegPole.R
+    m_Weight: 1
+  - m_Path: Armature/IKTarget.R/IKLegPole.R/IKLegPole.R_end
     m_Weight: 1
   - m_Path: Armature/Root
     m_Weight: 1

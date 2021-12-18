@@ -8,7 +8,7 @@ public class InstantiateEnemies : MonoBehaviour
     public GameObject[] floors;
     public GameObject enemies;
 
-    // Spawns an enemy on every "tile" of ground -> tiles need to be put in the array
+    // Spawns an enemy on the selected ground tiles and puts them as childs in the Enemies Empty
     private void Start()
     {
             for (int i = 0; i < floors.Length; i++)

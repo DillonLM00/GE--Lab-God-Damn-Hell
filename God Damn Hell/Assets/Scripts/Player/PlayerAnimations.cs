@@ -4,20 +4,27 @@ using UnityEngine;
 
 public class PlayerAnimations : MonoBehaviour
 {
+    // General variables
     private Animator animator;
     private PlayerMovement playermovement;
     private PlayerStats playerstats;
+
+    // Run
     private float angle;
     private Vector2 movementAxis;
+
+    // GetHit
     private int tempHealth;
+
+    // Die
     public bool stopRotation = false;
     public bool stopMovement = false;
 
-    public GameObject sword;
-    private Collider swordCollider;
+    // Attack
+    public BoxCollider swordCollider;
+    public BoxCollider shieldCollider;
 
-    public GameObject shield;
-    private Collider shieldCollider;
+    //AttackBlock is in EnemyHit!
 
     // Start is called before the first frame update
     void Start()
@@ -25,8 +32,6 @@ public class PlayerAnimations : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
         playerstats = GetComponent<PlayerStats>();
         playermovement = GetComponent<PlayerMovement>();
-        swordCollider = sword.GetComponent<BoxCollider>();
-        shieldCollider = shield.GetComponent<BoxCollider>();
         tempHealth = playerstats.healthPoints;
     }
 
@@ -132,7 +137,7 @@ public class PlayerAnimations : MonoBehaviour
             animator.SetTrigger("AttackTrigger");
         }
 
-        if (animator.GetCurrentAnimatorStateInfo(1).IsName("Attack"))
+        if (animator.GetCurrentAnimatorStateInfo(2).IsName("Attack"))
         {
             swordCollider.enabled = true;
         }
@@ -144,18 +149,15 @@ public class PlayerAnimations : MonoBehaviour
 
     private void Die()
     {
+        // Plays the death animation and sets the weight of all other layers to 0 so no animations can be played anymore
         if (playerstats.healthPoints <= 0)
         {
-            if (!animator.GetCurrentAnimatorStateInfo(0).IsName("Die"))
-            {
-                animator.SetTrigger("IsDead");
-                animator.SetLayerWeight(1, 0f);
-            }
+            animator.SetBool("isDeadBool", true);
+            animator.SetLayerWeight(1, 0f);
+            animator.SetLayerWeight(2, 0f);
+            animator.SetLayerWeight(3, 0f);
 
-            stopRotation = true;
-            stopMovement = true;
-            
-
+            playermovement.enabled = false;
         }
     }
 
@@ -170,7 +172,8 @@ public class PlayerAnimations : MonoBehaviour
             animator.SetBool("isBlocking", false);
         }
 
-        if (animator.GetCurrentAnimatorStateInfo(1).IsName("Block"))
+        // Activates / deactivate colliders to avoid unintended blocking and hitbox shenanigans
+        if (animator.GetCurrentAnimatorStateInfo(2).IsName("Block"))
         {
             shieldCollider.enabled = true;
         }
@@ -182,6 +185,7 @@ public class PlayerAnimations : MonoBehaviour
 
     private void GetHit()
     {
+        // Start() creates a copy of healthPoints and if the hp change the animation plays and the copy gets updated
         if (tempHealth != playerstats.healthPoints)
         {
             float randFloat = Random.Range(0f, 1f);

@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: PlayerUpperBodyMask
+  m_Mask: 00000000010000000100000000000000000000000000000000000000010000000100000000000000000000000000000000000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: Character
+    m_Weight: 1
+  - m_Path: Armature
+    m_Weight: 1
+  - m_Path: Armature/Hips
+    m_Weight: 1
+  - m_Path: Armature/Hips/Spine
+    m_Weight: 1
+  - m_Path: Armature/Hips/Spine/Chest
+    m_Weight: 1
+  - m_Path: Armature/Hips/Spine/Chest/Neck
+    m_Weight: 1
+  - m_Path: Armature/Hips/Spine/Chest/Neck/Head
+    m_Weight: 1
+  - m_Path: Armature/Hips/Spine/Chest/Neck/Head/Head_end
+    m_Weight: 1
+  - m_Path: Armature/Hips/Spine/Chest/MiddleHand
+    m_Weight: 1
+  - m_Path: Armature/Hips/Spine/Chest/MiddleHand/Hand.L
+    m_Weight: 1
+  - m_Path: Armature/Hips/Spine/Chest/MiddleHand/Hand.L/Hand.L_end
+    m_Weight: 1
+  - m_Path: Armature/Hips/Spine/Chest/MiddleHand/Hand.R
+    m_Weight: 1
+  - m_Path: Armature/Hips/Spine/Chest/MiddleHand/Hand.R/Hand.R_end
+    m_Weight: 1
+  - m_Path: Armature/Hips/UpperLeg.L
+    m_Weight: 0
+  - m_Path: Armature/Hips/UpperLeg.L/MiddleLeg.L
+    m_Weight: 0
+  - m_Path: Armature/Hips/UpperLeg.L/MiddleLeg.L/LowerLeg.L
+    m_Weight: 0
+  - m_Path: Armature/Hips/UpperLeg.L/MiddleLeg.L/LowerLeg.L/Food.L
+    m_Weight: 0
+  - m_Path: Armature/Hips/UpperLeg.L/MiddleLeg.L/LowerLeg.L/Food.L/Food.L_end
+    m_Weight: 0
+  - m_Path: Armature/Hips/UpperLeg.R
+    m_Weight: 0
+  - m_Path: Armature/Hips/UpperLeg.R/MiddleLeg.R
+    m_Weight: 0
+  - m_Path: Armature/Hips/UpperLeg.R/MiddleLeg.R/LowerLeg.R
+    m_Weight: 0
+  - m_Path: Armature/Hips/UpperLeg.R/MiddleLeg.R/LowerLeg.R/Food.R
+    m_Weight: 0
+  - m_Path: Armature/Hips/UpperLeg.R/MiddleLeg.R/LowerLeg.R/Food.R/Food.R_end
+    m_Weight: 0
+  - m_Path: Armature/IKTarget.L
+    m_Weight: 0
+  - m_Path: Armature/IKTarget.L/IKTarget.L_end
+    m_Weight: 0
+  - m_Path: Armature/IKLegPole.L
+    m_Weight: 0
+  - m_Path: Armature/IKLegPole.L/IKLegPole.L_end
+    m_Weight: 0
+  - m_Path: Armature/IKTarget.R
+    m_Weight: 0
+  - m_Path: Armature/IKTarget.R/IKTarget.R_end
+    m_Weight: 0
+  - m_Path: Armature/IKLegPole.R
+    m_Weight: 0
+  - m_Path: Armature/IKLegPole.R/IKLegPole.R_end
+    m_Weight: 0

@@ -17,7 +17,7 @@ public class Hit : MonoBehaviour
 
     public virtual void OnTriggerEnter(Collider other)
     {
-        if (lastHit >= 1f && other.gameObject.transform.tag == "Enemy" && animator.GetCurrentAnimatorStateInfo(1).IsName("Attack"))
+        if (lastHit >= 1f && other.gameObject.transform.tag == "Enemy" && animator.GetCurrentAnimatorStateInfo(2).IsName("Attack"))
         {
             other.gameObject.transform.GetComponent<EnemyStats>().healthPoints--;
             Vector3 direction = (other.transform.position - player.transform.position);

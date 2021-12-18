@@ -15,12 +15,23 @@ public class EnemyAnimations : MonoBehaviour
     // Attack
     private float timeSinceLastAttack;
     private float randFloat;
+    public GameObject leftHand;
+    public GameObject rightHand;
+    private Collider leftHandCollider;
+    private Collider rightHandCollider;
+
+    // Die
+    private float timeDead;
 
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+
         enemyStats = GetComponent<EnemyStats>();
         tempHealthPoints = enemyStats.healthPoints;
+
+        leftHandCollider = leftHand.GetComponent<BoxCollider>();
+        rightHandCollider = rightHand.GetComponent<BoxCollider>();
     }
 
     private void Update()
@@ -38,33 +49,73 @@ public class EnemyAnimations : MonoBehaviour
 
     public virtual void Attack()
     {
-        timeSinceLastAttack += Time.deltaTime;
-
-        if (Vector3.Distance(transform.position, player.transform.position) < 3 && timeSinceLastAttack > 1.5f)
+        // If the player is close enough start attacking
+        if ((Vector3.Distance(transform.position, player.transform.position) < 5f))
         {
             randFloat = Random.Range(0f, 1f);
             animator.SetFloat("AttackFloat", randFloat);
-            timeSinceLastAttack = 0f;
+        }
+        else
+        {
+            animator.SetFloat("AttackFloat", 0f);
+        }
+
+        // Activates / deactivates the collider
+        if (animator.GetCurrentAnimatorStateInfo(1).IsName("AttackLeft"))
+        {
+            leftHandCollider.enabled = true;
+        }
+        else
+        {
+            leftHandCollider.enabled = false;
+        }
+
+        if (animator.GetCurrentAnimatorStateInfo(1).IsName("AttackRight"))
+        {
+            rightHandCollider.enabled = true;
+        }
+        else
+        {
+            rightHandCollider.enabled = false;
         }
     }
 
 
     public virtual void Die()
     {
-        if (enemyStats.healthPoints < 0)
+        // Play animation when dead
+        if (enemyStats.healthPoints <= 0)
         {
-            if (!animator.GetCurrentAnimatorStateInfo(1).IsName("Die"))
+            if (!animator.GetCurrentAnimatorStateInfo(3).IsName("Death"))
             {
-                animator.SetTrigger("IsDead");
+                animator.SetBool("IsDeadBool", true);
+            }
+        }
+
+        if (animator.GetBool("IsDeadBool") == true)
+        {
+            timeDead += Time.deltaTime;
+
+            // Disable animator after 1.5s so it cant attack anymore
+            if (timeDead > 1.5f)
+            {
+                animator.enabled = false;
+            }
+
+            // Despawn after 5s
+            if (timeDead >= 5)
+            {
+                Destroy(gameObject);
             }
         }
     }
 
     public virtual void GetHit()
     {
+        // Checks if the hp values changed, if so then play the hit animation
         if (tempHealthPoints != enemyStats.healthPoints)
         {
-            animator.SetTrigger("GetHit");
+            animator.SetTrigger("GetHitTrigger");
             tempHealthPoints = enemyStats.healthPoints;
         }
     }
