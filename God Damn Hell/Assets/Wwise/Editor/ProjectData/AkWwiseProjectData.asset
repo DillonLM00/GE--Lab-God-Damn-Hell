@@ -24,7 +24,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics\Default Work Unit
     guid: 370de44575768f489e640f7dd0ba779e
     GuidInternal: 
-    m_lastTime: -8585599460244775808
+    m_lastTime: -8585594196204144032
     List: []
   AuxBusWwu:
   - PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 2c4f1467dae49a4684554f9a29b9d07a
     GuidInternal: 
-    m_lastTime: -8585599460244775808
+    m_lastTime: -8585594196210884978
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 66687670ee694d489d62771cc1401dcb
     GuidInternal: 
-    m_lastTime: -8585593068129990717
+    m_lastTime: -8585592822275348382
     List:
     - name: Enemies
       guid: 1ac8e7d03180264a9b66060591639457
@@ -150,7 +150,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 96f2b1fe20fa0144813ad43ca98083c2
     GuidInternal: 
-    m_lastTime: -8585593312627047867
+    m_lastTime: -8585593248792359596
     List: []
   - PhysicalPath: Events\Enemy.wwu
     PathAndIcons:
@@ -166,7 +166,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit\Enemy
     guid: ece04a65bd84f141aac4a2bebacece28
     GuidInternal: 
-    m_lastTime: -8585593049707869448
+    m_lastTime: -8585592822279429547
     List:
     - name: DemonFighter
       guid: 07622ac31fbd6d4e98278145d69136ed
@@ -564,7 +564,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit\Misc
     guid: 38851f663c90cb47ab344da8a1d968e0
     GuidInternal: 
-    m_lastTime: -8585593120828969147
+    m_lastTime: -8585592822279424542
     List:
     - name: GateClose
       guid: b3b3c070976665489ae22edc56af7111
@@ -640,7 +640,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit\Music
     guid: b78cf16ee38bc442ac0cbbbc194feecb
     GuidInternal: 
-    m_lastTime: -8585593312825934456
+    m_lastTime: -8585593248792344588
     List:
     - name: IngameMusic
       guid: 3019900727b088438f60c4274010b18d
@@ -696,7 +696,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit\Player
     guid: ba88319e4c7f1a409355cef3459a8722
     GuidInternal: 
-    m_lastTime: -8585593312626922391
+    m_lastTime: -8585593248792339579
     List:
     - name: AttackBlocked
       guid: 44282d15a635f34ab222814e82d1f867
@@ -810,7 +810,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 6998021113b3504b8077a724c13c14ad
     GuidInternal: 
-    m_lastTime: -8585599460244775808
+    m_lastTime: -8585594196221329581
     List: []
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
@@ -824,7 +824,7 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 7978cba7b82a99408f90c187c9a553d7
     GuidInternal: 
-    m_lastTime: -8585599460244775808
+    m_lastTime: -8585594196204164060
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
@@ -838,7 +838,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: fcd0045ebe7a404680651efee7be0637
     GuidInternal: 
-    m_lastTime: -8585599460244775808
+    m_lastTime: -8585594196204154050
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -852,10 +852,10 @@ MonoBehaviour:
     ParentPath: Triggers\Default Work Unit
     guid: e8dee53f79efbe489ad73132f3cf0e2c
     GuidInternal: 
-    m_lastTime: -8585599460244775808
+    m_lastTime: -8585594196204149043
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 010000000d0000000e000000
+  ExpandedWaapiItemIds: 
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
